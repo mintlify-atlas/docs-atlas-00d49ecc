@@ -1,0 +1,191 @@
+{
+  "projectType": "saas",
+  "projectName": "DeaMap",
+  "projectDescription": "Collaborative platform for managing and visualizing AED (defibrillator) locations across Spain with web and mobile applications.",
+  "theme": "maple",
+  "primaryColor": "#040404",
+  "lightColor": "#cf6364",
+  "darkColor": "#2a7446",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "platform-overview"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/aed-management",
+              "features/interactive-map",
+              "features/user-authentication",
+              "features/organization-system",
+              "features/verification-workflow"
+            ]
+          },
+          {
+            "group": "Mobile App",
+            "pages": [
+              "mobile/overview",
+              "mobile/installation",
+              "mobile/architecture",
+              "mobile/offline-support"
+            ]
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "admin/dashboard",
+              "admin/user-management",
+              "admin/organization-management",
+              "admin/data-imports",
+              "admin/batch-processing"
+            ]
+          },
+          {
+            "group": "Data Management",
+            "pages": [
+              "data/csv-import",
+              "data/duplicate-detection",
+              "data/external-sources",
+              "data/batch-sync",
+              "data/recovery-system"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/introduction",
+              "api/authentication",
+              "api/error-handling",
+              "api/rate-limiting"
+            ]
+          },
+          {
+            "group": "Public API",
+            "pages": [
+              "api/aeds/list",
+              "api/aeds/get",
+              "api/aeds/search",
+              "api/geocode"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/register",
+              "api/auth/login",
+              "api/auth/logout",
+              "api/auth/profile",
+              "api/auth/password-reset"
+            ]
+          },
+          {
+            "group": "Admin API",
+            "pages": [
+              "api/admin/deas",
+              "api/admin/users",
+              "api/admin/organizations",
+              "api/admin/data-sources",
+              "api/admin/batch-jobs"
+            ]
+          },
+          {
+            "group": "Import & Export",
+            "pages": [
+              "api/import/csv",
+              "api/import/validate",
+              "api/import/preview",
+              "api/export/csv"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Architecture",
+            "pages": [
+              "development/architecture-overview",
+              "development/ddd-principles",
+              "development/clean-architecture",
+              "development/folder-structure"
+            ]
+          },
+          {
+            "group": "Database",
+            "pages": [
+              "development/database-schema",
+              "development/migrations",
+              "development/postgis-integration",
+              "development/branch-databases"
+            ]
+          },
+          {
+            "group": "Development Workflow",
+            "pages": [
+              "development/local-setup",
+              "development/testing",
+              "development/ci-cd",
+              "development/code-standards"
+            ]
+          },
+          {
+            "group": "Mobile Development",
+            "pages": [
+              "development/mobile-setup",
+              "development/mobile-architecture",
+              "development/mobile-testing",
+              "development/mobile-builds"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/vercel",
+              "deployment/android",
+              "deployment/ios",
+              "deployment/environment-variables"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Interactive map with PostGIS geospatial queries",
+    "Mobile apps for iOS and Android with offline support",
+    "CSV import system with validation and duplicate detection",
+    "Batch processing for large datasets (4000+ records)",
+    "Organization management with role-based permissions",
+    "AED verification and publication workflow",
+    "External data source synchronization",
+    "Recovery system for failed imports",
+    "Clean Architecture with DDD patterns",
+    "Branch-specific database environments"
+  ],
+  "publicApiSurface": [
+    "GET /api/aeds - List published AEDs",
+    "GET /api/aeds/[id] - Get AED details",
+    "GET /api/deas/nearby - Find nearby AEDs",
+    "POST /api/auth/register - User registration",
+    "POST /api/auth/login - User authentication",
+    "POST /api/import - CSV import with validation",
+    "POST /api/admin/deas - Create/update AEDs (admin)",
+    "POST /api/admin/data-sources/[id]/sync - Sync external data",
+    "GET /api/batch/[id]/status - Batch job status",
+    "POST /api/verify/[token] - Email verification"
+  ]
+}
